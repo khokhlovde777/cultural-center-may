@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>демо версия вёрстки</title>
+    <style>
+      :root {
+        color-scheme: light;
+
+        /* --- Базовые --- */
+        --red-900: #390101;
+        --red-700: #5B0609;
+        --red-500: #9B1B1B;
+        --navy-900: #182F4E;
+        --navy-700: #17304F;
+        --neutral-white: #FFFFFF;
+        --neutral-50: #F5F5F5;
+        --neutral-100: #EAEAEA;
+        --neutral-200: #D9D9D9;
+        --neutral-300: #BEBEBE;
+        --neutral-400: #929292;
+        --neutral-500: #6E6255;
+        --neutral-900: #241C16;
+        --neutral-black: #000000;
+        --tint-cream: #FEEDE9;
+        --tint-purple: #E5C6FF;
+        --tint-blue: #D4E4FF;
+        --tint-mint: #C2F7B9;
+        --blue-600: #0347BD;
+
+        /* --- Семантика --- */
+        --bg: var(--neutral-white);
+        --card: var(--neutral-50);
+        --text: var(--neutral-900);
+        --muted: var(--neutral-400);
+        --border: var(--neutral-200);
+        --accent: var(--red-500);
+        --brand-primary: var(--red-700);
+        --brand-primary-dark: var(--red-900);
+        --brand-secondary: var(--navy-700);
+        --brand-secondary-dark: var(--navy-900);
+        --link: var(--blue-600);
+        --tint-bg: var(--tint-cream);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans",
+          "Liberation Sans", sans-serif;
+        background: radial-gradient(900px 480px at 20% 0%, rgba(155, 27, 27, 0.06), transparent 65%),
+          radial-gradient(760px 520px at 100% 20%, rgba(23, 48, 79, 0.06), transparent 60%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.45;
+        background-repeat: no-repeat;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .container {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 48px 20px 56px;
+      }
+
+      header {
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: 28px;
+        letter-spacing: -0.02em;
+        color: var(--brand-primary-dark);
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--neutral-500);
+      }
+
+      .grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 12px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 14px 14px 12px;
+        border-radius: 14px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        text-decoration: none;
+        transition: transform 120ms ease, border-color 120ms ease, background 120ms ease,
+          box-shadow 120ms ease;
+      }
+
+      .card:hover {
+        transform: translateY(-1px);
+        border-color: var(--brand-accent, var(--accent));
+        background: var(--neutral-white);
+        box-shadow: 0 6px 20px rgba(57, 1, 1, 0.08);
+      }
+
+      .title-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .page-title {
+        font-weight: 650;
+        color: var(--brand-primary-dark);
+      }
+
+      .badge {
+        flex: none;
+        font-size: 12px;
+        color: var(--brand-secondary);
+        background: var(--tint-bg);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 2px 10px;
+      }
+
+      .path {
+        margin: 0;
+        font-size: 13px;
+        color: var(--muted);
+        word-break: break-all;
+      }
+
+      .hint {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .hint code {
+        color: var(--brand-primary);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Демо версия вёрстки</h1>
+        <p class="subtitle">Быстрые ссылки для открытия макетов/страниц.</p>
+      </header>
+
+      <main class="grid">
+        
+        <a class="card" href="html/main.html">
+          <div class="title-row">
+            <div class="page-title">Главная</div>
+            <div class="badge">main</div>
+          </div>
+          <p class="path">html/main.html</p>
+        </a>
+
+      </main>
+    </div>
+  </body>
+</html>
