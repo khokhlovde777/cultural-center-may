@@ -30,6 +30,47 @@
   font-display: swap;
 }
 
+:root {
+  color-scheme: light;
+
+  --color-red-900: #390101;
+  --color-red-700: #5B0609;
+  --color-red-500: #9B1B1B;
+  --color-navy-900: #182F4E;
+  --color-navy-700: #17304F;
+  --color-neutral-white: #FFFFFF;
+  --color-neutral-50: #F5F5F5;
+  --color-neutral-100: #EAEAEA;
+  --color-neutral-200: #D9D9D9;
+  --color-neutral-300: #BEBEBE;
+  --color-neutral-400: #929292;
+  --color-neutral-500: #6E6255;
+  --color-neutral-900: #241C16;
+  --color-neutral-black: #000000;
+  --color-tint-cream: #FEEDE9;
+  --color-tint-purple: #E5C6FF;
+  --color-tint-blue: #D4E4FF;
+  --color-tint-mint: #C2F7B9;
+  --color-blue-600: #0347BD;
+
+  --brand-primary: var(--color-red-700);
+  --brand-primary-dark: var(--color-red-900);
+  --brand-accent: var(--color-red-500);
+  --brand-secondary: var(--color-navy-700);
+  --brand-secondary-dark: var(--color-navy-900);
+  --text-primary: var(--color-neutral-900);
+  --text-secondary: var(--color-neutral-500);
+  --text-muted: var(--color-neutral-400);
+  --text-inverse: var(--color-neutral-white);
+  --bg-default: var(--color-neutral-white);
+  --bg-subtle: var(--color-neutral-50);
+  --bg-tint: var(--color-tint-cream);
+  --border-default: var(--color-neutral-300);
+  --border-subtle: var(--color-neutral-200);
+  --link: var(--color-blue-600);
+  --surface-dark: var(--color-color-navy-900);
+}
+
 *,
 *::before,
 *::after {
@@ -59,7 +100,7 @@ html {
 
 html,
 body {
-  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -122,6 +163,25 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  flex-shrink: 0;
+  background: 0; 
+  transition: all 0.2s ease;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  border-radius: 32px;
+  padding: 8px 24px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -172,4 +232,126 @@ h1, h2, h3, h4, h5, h6, p, li, figcaption {
     transition-duration: .01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.font-regular-14 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+.font-regular-16 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.font-regular-24 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.font-medium-32 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.font-semibold-12 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 2%;
+}
+
+.font-semibold-14 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 2%;
+}
+
+.font-semibold-16 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+.font-semibold-20 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.font-semibold-24 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0%;
+}
+
+.font-semibold-40 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+.font-semibold-64 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 115%;
+  letter-spacing: 0%;
+}
+
+.btn-default-primary {
+  background-color: var(--brand-primary);
+  color: var(--text-inverse);
+  border: 2px solid var(--brand-primary);
+}
+
+.btn-default-primary:hover {
+  background-color: #5B060960;
+  border: 2px solid var(--brand-primary);
+}
+
+.btn-default-primary-disabled {
+  background-color: #D1ACAD;
+}
+
+.header-wrapper {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 15px; 
+  background-color: #FEEDE999;
+  z-index: 10;
+  backdrop-filter: blur(7px);
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
