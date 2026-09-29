@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -8,40 +8,42 @@
       :root {
         color-scheme: light;
 
-        /* --- Базовые --- */
-        --red-900: #390101;
-        --red-700: #5B0609;
-        --red-500: #9B1B1B;
-        --navy-900: #182F4E;
-        --navy-700: #17304F;
-        --neutral-white: #FFFFFF;
-        --neutral-50: #F5F5F5;
-        --neutral-100: #EAEAEA;
-        --neutral-200: #D9D9D9;
-        --neutral-300: #BEBEBE;
-        --neutral-400: #929292;
-        --neutral-500: #6E6255;
-        --neutral-900: #241C16;
-        --neutral-black: #000000;
-        --tint-cream: #FEEDE9;
-        --tint-purple: #E5C6FF;
-        --tint-blue: #D4E4FF;
-        --tint-mint: #C2F7B9;
-        --blue-600: #0347BD;
+        --color-red-900: #390101;
+        --color-red-700: #5B0609;
+        --color-red-500: #9B1B1B;
+        --color-navy-900: #182F4E;
+        --color-navy-700: #17304F;
+        --color-neutral-white: #FFFFFF;
+        --color-neutral-50: #F5F5F5;
+        --color-neutral-100: #EAEAEA;
+        --color-neutral-200: #D9D9D9;
+        --color-neutral-300: #BEBEBE;
+        --color-neutral-400: #929292;
+        --color-neutral-500: #6E6255;
+        --color-neutral-900: #241C16;
+        --color-neutral-black: #000000;
+        --color-tint-cream: #FEEDE9;
+        --color-tint-purple: #E5C6FF;
+        --color-tint-blue: #D4E4FF;
+        --color-tint-mint: #C2F7B9;
+        --color-blue-600: #0347BD;
 
-        /* --- Семантика --- */
-        --bg: var(--neutral-white);
-        --card: var(--neutral-50);
-        --text: var(--neutral-900);
-        --muted: var(--neutral-400);
-        --border: var(--neutral-200);
-        --accent: var(--red-500);
-        --brand-primary: var(--red-700);
-        --brand-primary-dark: var(--red-900);
-        --brand-secondary: var(--navy-700);
-        --brand-secondary-dark: var(--navy-900);
-        --link: var(--blue-600);
-        --tint-bg: var(--tint-cream);
+        --brand-primary: var(--color-red-700);
+        --brand-primary-dark: var(--color-red-900);
+        --brand-accent: var(--color-red-500);
+        --brand-secondary: var(--color-navy-700);
+        --brand-secondary-dark: var(--color-navy-900);
+        --text-primary: var(--color-neutral-900);
+        --text-secondary: var(--color-neutral-500);
+        --text-muted: var(--color-neutral-400);
+        --text-inverse: var(--color-neutral-white);
+        --bg-default: var(--color-neutral-white);
+        --bg-subtle: var(--color-neutral-50);
+        --bg-tint: var(--color-tint-cream);
+        --border-default: var(--color-neutral-300);
+        --border-subtle: var(--color-neutral-200);
+        --link: var(--color-blue-600);
+        --surface-dark: var(--color-color-navy-900);
       }
 
       * {
@@ -49,14 +51,10 @@
       }
 
       body {
-        margin: 0;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans",
-          "Liberation Sans", sans-serif;
         background: radial-gradient(900px 480px at 20% 0%, rgba(155, 27, 27, 0.06), transparent 65%),
           radial-gradient(760px 520px at 100% 20%, rgba(23, 48, 79, 0.06), transparent 60%),
-          var(--bg);
-        color: var(--text);
-        line-height: 1.45;
+          var(--bg-default);
+        color: var(--text-primary);
         background-repeat: no-repeat;
       }
 
@@ -83,7 +81,7 @@
 
       .subtitle {
         margin: 0;
-        color: var(--neutral-500);
+        color: var(--text-secondary);
       }
 
       .grid {
@@ -99,8 +97,8 @@
         gap: 6px;
         padding: 14px 14px 12px;
         border-radius: 14px;
-        background: var(--card);
-        border: 1px solid var(--border);
+        background: var(--color-neutral-50);
+        border: 1px solid var(--border-default);
         text-decoration: none;
         transition: transform 120ms ease, border-color 120ms ease, background 120ms ease,
           box-shadow 120ms ease;
@@ -108,7 +106,7 @@
 
       .card:hover {
         transform: translateY(-1px);
-        border-color: var(--brand-accent, var(--accent));
+        border-color: var(--brand-accent);
         background: var(--neutral-white);
         box-shadow: 0 6px 20px rgba(57, 1, 1, 0.08);
       }
@@ -129,8 +127,8 @@
         flex: none;
         font-size: 12px;
         color: var(--brand-secondary);
-        background: var(--tint-bg);
-        border: 1px solid var(--border);
+        background: var(--bg-tint);
+        border: 1px solid var(--border-default);
         border-radius: 999px;
         padding: 2px 10px;
       }
@@ -138,13 +136,13 @@
       .path {
         margin: 0;
         font-size: 13px;
-        color: var(--muted);
+        color: var(--text-muted);
         word-break: break-all;
       }
 
       .hint {
         margin-top: 18px;
-        color: var(--muted);
+        color: var(--text-muted);
         font-size: 13px;
       }
 
