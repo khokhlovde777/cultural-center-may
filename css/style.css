@@ -367,13 +367,13 @@ h1, h2, h3, h4, h5, h6, p, li, figcaption {
   transform: scale(1.03);
 }
 
-.content-area {
+.content-area, .section-scroll {
   max-width: 1248px;
   width: 100%;
 }
 
 @media (max-width: 1440px) {
-  .content-area {
+  .content-area, .section-scroll {
     max-width: 1170px;
   }
 }
