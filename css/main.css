@@ -172,6 +172,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 478px;
 }
 
 .detail-item {
@@ -179,9 +181,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 478px;
   gap: 16px;
+  width: 100%;
 }
 
 .detail__label {
