@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css/card-item.css">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/calendar.css">
   <title>Главная</title>
 </head>
 <body>
@@ -59,9 +60,37 @@
           <div class="content-calendar">
             <h1 class="calendar-label font-semibold-40">Афиша</h1>
             <div class="calendar-info font-regular-16">Приобретайте билеты удобным способом: на сайте онлайн или в кассе центра культуры.<br>Телефон для справок: <span class="font-semibold-16">+7 (900) 000-00-00</span></div>
-            <div class="calendar-wrapper">
 
+            <div class="calendar-wrapper">
+              <div class="calendar-content">
+                <div class="days__icon">
+                  <img class="icon-calendar" src="../src/icons/icon-calendar.svg" alt="">
+                </div>
+                <div class="calendar__content">
+                    <a class="month-title font-semibold-16" id="monthTitle"></a>
+                    <a class="calendar-grid" id="calendarGrid"></a>
+                </div>
+                <div class="modal-choose-month" id="modalChooseMonth">
+                  <div class="modal__up">
+                      <button type="button" class="btn modal__btn modal__btn-arrow-left">
+                          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.90039 12.8999L0.900391 6.8999L6.90039 0.899902" stroke="#241C16" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </button>
+                      <button type="button" class="btn modal__btn modal__btn-year font-semibold-16" id="modalYear"></button>
+                      <button type="button" class="btn modal__btn modal__btn-arrow-right">
+                          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.900391 12.8999L6.900391 6.8999L0.900391 0.899902" stroke="#241C16" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </button>
+                  </div>
+                  <hr class="modal__devider">
+                  <div class="modal__down" id="modalMonths"></div>
+              </div>
+              </div>
+              <div class="calendar-filters"></div>
             </div>
+
           </div>
 
           <div class="upcoming-events">
@@ -382,6 +411,8 @@
     </div>
 
   </footer>
+
+  <script src="../js/calendar.js"></script>
 
 </body>
 </html>

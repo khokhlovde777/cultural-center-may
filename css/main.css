@@ -104,12 +104,6 @@
   padding: 16px 24px;
 }
 
-.calendar-wrapper {
-  background-color: var(--color-neutral-50);
-  width: 100%;
-  height: 189px;
-  border-radius: 20px;
-}
 
 .upcoming-events {
   width: 100%;
@@ -228,15 +222,27 @@
   align-items: start;
   justify-content: start;
   gap: 24px;
-  overflow-x: scroll;
+  overflow-x: visible;
 }
 
 .section-scroll {
   overflow: visible;
 }
 
+.section-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.section-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
 .first-group {
-  /* margin-left: 135px; */
+  margin-left: max(24px, calc((100vw - 1248px) / 2));
 }
 
 .creative-groups__items::-webkit-scrollbar {
