@@ -63,11 +63,11 @@
 
             <div class="calendar-wrapper">
               <div class="calendar-content">
-                <div class="days__icon">
+                <button id="buttonCalendar" type="button" class="btn modal__btn days__icon">
                   <img class="icon-calendar" src="../src/icons/icon-calendar.svg" alt="">
-                </div>
+                </button>
                 <div class="calendar__content">
-                    <a class="month-title font-semibold-16" id="monthTitle"></a>
+                    <button type="button" class="btn modal__btn month-title font-semibold-16" id="monthTitle"></button>
                     <a class="calendar-grid" id="calendarGrid"></a>
                 </div>
                 <div class="modal-choose-month" id="modalChooseMonth">
@@ -86,9 +86,28 @@
                   </div>
                   <hr class="modal__devider">
                   <div class="modal__down" id="modalMonths"></div>
+                </div>
               </div>
+
+              <div class="calendar-filters">
+                <div class="filter-wrapper" id="filterTypeWrapper">
+                  <button id="filterType" type="button" class="btn filter-btn">
+                    <p class="filter-button__name font-semibold-16">Тип мероприятия</p>
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.900391 0.900002L6.90039 6.9L12.9004 0.900002" stroke="#5B0609" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="filter-wrapper" id="forWhomWrapper">
+                  <button id="forWhom" type="button" class="btn filter-btn">
+                    <p class="filter-button__name font-semibold-16">Для кого</p>
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.900391 0.900002L6.90039 6.9L12.9004 0.900002" stroke="#5B0609" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div class="calendar-filters"></div>
             </div>
 
           </div>

@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
-  /* height: 706px; */
-  height: 100vh;
+  height: 706px;
+  /* height: 100vh; */
   position: relative;
   overflow: hidden;
 }
