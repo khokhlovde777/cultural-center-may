@@ -352,9 +352,10 @@ h1, h2, h3, h4, h5, h6, p, li, figcaption {
 .btn-secondary {
   color: var(--brand-primary);
   border: 2px solid var(--brand-primary);
+  height: 35px;
 }
 
-.btn-secondary:hover {
+.btn-secondary:not(.btn-cancel-opacity):hover {
   background-color: #FEDED6;
   border: 2px solid var(--brand-primary);
 }

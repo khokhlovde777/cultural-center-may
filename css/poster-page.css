@@ -1,0 +1,156 @@
+.head-section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 706px;
+  /* height: 100vh; */
+  position: relative;
+  overflow: hidden;
+}
+
+.head-section__badge {
+  color: #FFEDE9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  background-color: #FFEDE940;
+  border-radius: 100px;
+  border: 1px solid #FFEDE9;
+}
+
+.head-section__text {
+  color: var(--text-inverse);
+  opacity: .7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.head__par {
+  width: 528px; 
+  text-align: center;
+}
+
+.head-section__back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.back-color {
+  width: 100%;
+  height: 100%;
+  background-color: #1B2C4899;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.back-img {
+  width: 102vw;
+  max-width: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.poster-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.poster-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  width: 100%;
+}
+
+.content-calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 32px;
+}
+
+.calendar-label {
+  width: 100%;
+  text-align: start;
+}
+
+.calendar-info {
+  background-color: var(--color-tint-blue);
+  width: 100%;
+  border-radius: 20px;
+  padding: 16px 24px;
+}
+
+.upcoming-events {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.events-wrapper {
+  width: 100%;
+  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn-cancel-opacity {
+  opacity: .3;
+}
+
+.pagination-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.pag__arrow {
+  width: 24px;
+}
+
+.numbers__pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.pag__btn {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+
+
+@media (max-width: 1440px) {
+  .events-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

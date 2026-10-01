@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/calendar.css">
+  <link rel="stylesheet" href="../css/poster-page.css">
+  <link rel="stylesheet" href="../css/card-item.css">
+  <title>Афиша</title>
+</head>
+<body>
+
+  <header>
+    <div class="header-wrapper">
+
+      <a href="main.html" class="header__logo">
+        <img src="../src/logo.svg" alt="На главную">
+      </a>
+
+      <div class="header-menu">
+        <a href="" class="menu__link font-semibold-16">О центре</a>
+        <a href="" class="menu__link font-semibold-16">Афиша</a>
+        <a href="" class="menu__link font-semibold-16">Творческие коллективы</a>
+        <a href="" class="menu__link font-semibold-16">Новости</a>
+        <a href="" class="menu__link font-semibold-16">Контакты</a>
+      </div>
+
+      <button type="button" class="btn btn-primary">
+        <p class="font-semibold-16">Купить билет</p>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <div class="head-section">
+      <div class="head-section__badge font-semibold-14">НОВОЕ ПРОСТРАНСТВО ГОРОДА</div>
+      <div class="head-section__text">
+        <h1 class="font-semibold-64">«МАЙСКИЙ»</h1>
+        <p class="font-regular-16 head__par">Центр культуры нового поколения — концертный зал, галерея и творческие студии в самом сердце города.</p>
+      </div>
+      <button type="button" class="btn btn-primary">
+        <p class="font-semibold-16">Смотреть афишу</p> 
+      </button>
+      <div class="head-section__back">
+        <div class="back-color"></div>
+        <img class="back-img" src="../src/main_back.png" alt="">
+      </div>
+    </div>
+
+    <section class="poster-section">
+
+      <div class="content-area">
+        <div class="poster-content">
+
+          <div class="content-calendar">
+            <h1 class="calendar-label font-semibold-40">Афиша</h1>
+            <div class="calendar-info font-regular-16">Приобретайте билеты удобным способом: на сайте онлайн или в кассе центра культуры.<br>Телефон для справок: <span class="font-semibold-16">+7 (900) 000-00-00</span></div>
+
+            <div class="calendar-wrapper">
+              <div class="calendar-content">
+                <button id="buttonCalendar" type="button" class="btn modal__btn days__icon">
+                  <img class="icon-calendar" src="../src/icons/icon-calendar.svg" alt="">
+                </button>
+                <div class="calendar__content">
+                    <button type="button" class="btn modal__btn month-title font-semibold-16" id="monthTitle"></button>
+                    <a class="calendar-grid" id="calendarGrid"></a>
+                </div>
+                <div class="modal-choose-month" id="modalChooseMonth">
+                  <div class="modal__up">
+                      <button type="button" class="btn modal__btn modal__btn-arrow-left">
+                          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6.90039 12.8999L0.900391 6.8999L6.90039 0.899902" stroke="#241C16" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </button>
+                      <button type="button" class="btn modal__btn modal__btn-year font-semibold-16" id="modalYear"></button>
+                      <button type="button" class="btn modal__btn modal__btn-arrow-right">
+                          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.900391 12.8999L6.900391 6.8999L0.900391 0.899902" stroke="#241C16" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </button>
+                  </div>
+                  <hr class="modal__devider">
+                  <div class="modal__down" id="modalMonths"></div>
+                </div>
+              </div>
+
+              <div class="calendar-filters">
+                <div class="filter-wrapper" id="filterTypeWrapper">
+                  <button id="filterType" type="button" class="btn filter-btn">
+                    <p class="filter-button__name font-semibold-16">Тип мероприятия</p>
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.900391 0.900002L6.90039 6.9L12.9004 0.900002" stroke="#5B0609" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="filter-wrapper" id="forWhomWrapper">
+                  <button id="forWhom" type="button" class="btn filter-btn">
+                    <p class="filter-button__name font-semibold-16">Для кого</p>
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.900391 0.900002L6.90039 6.9L12.9004 0.900002" stroke="#5B0609" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="upcoming-events">
+
+            <div class="events-wrapper">
+
+              <div class="event-item card">
+
+                <div class="item__img-wrapper">
+                  <div class="item__category-absolute font-regular-14">Концерт</div>
+                  <img class="item__img" src="../src/item__img.png" alt="">
+                </div>
+
+                <div class="item-info">
+
+                  <div class="info-date-time">
+                    <div class="info__date">
+                      <img class="date__icon" src="../src/icons/Calendar.svg" alt="">
+                      <p class="date__text">14 сентября</p>
+                    </div>
+                    <div class="info__time">
+                      <img class="time__icon" src="../src/icons/Clock.svg" alt="">
+                      <p class="time__text">19:00</p>
+                    </div>
+                  </div>
+
+                  <p class="item__label">Вечер романтики</p>
+
+                  <div class="item-price-button">
+                    <p class="item__price font-semibold-20">от 500 ₽</p>
+                    <button type="button" class="btn btn-secondary font-semibold-14">Купить билет</button>
+                  </div>
+
+                </div>
+                
+              </div>
+
+              <div class="event-item card">
+
+                <div class="item__img-wrapper">
+                  <div class="item__category-absolute item__category-status-transfer font-regular-14">Перенос</div>
+                  <img class="item__img" src="../src/item__img.png" alt="">
+                </div>
+
+                <div class="item-info">
+
+                  <div class="item__addit-info transfer">
+                    <p class="addit-info__text font-regular-14">20 сентября, 18:30</p>
+                  </div>
+
+                  <div class="info-date-time">
+                    <div class="info__date">
+                      <img class="date__icon" src="../src/icons/Calendar.svg" alt="">
+                      <p class="date__text">14 сентября</p>
+                    </div>
+                    <div class="info__time">
+                      <img class="time__icon" src="../src/icons/Clock.svg" alt="">
+                      <p class="time__text">19:00</p>
+                    </div>
+                  </div>
+
+                  <p class="item__label">Вечер романтики</p>
+
+                  <div class="item-price-button">
+                    <p class="item__price font-semibold-20">от 500 ₽</p>
+                    <button type="button" class="btn btn-secondary font-semibold-14">Купить билет</button>
+                  </div>
+
+                </div>
+                
+              </div>
+
+              <div class="event-item card">
+
+                <div class="item__img-wrapper">
+                  <div class="item__category-absolute item__category-status-cancel font-regular-14">Отмена</div>
+                  <img class="item__img" src="../src/item__img.png" alt="">
+                </div>
+
+                <div class="item-info">
+
+                  <div class="item__addit-info cancel">
+                    <p class="addit-info__text font-regular-14">20 сентября, 18:30</p>
+                  </div>
+
+                  <!-- <div class="info-date-time">
+                    <div class="info__date">
+                      <img class="date__icon" src="../src/icons/Calendar.svg" alt="">
+                      <p class="date__text">14 сентября</p>
+                    </div>
+                    <div class="info__time">
+                      <img class="time__icon" src="../src/icons/Clock.svg" alt="">
+                      <p class="time__text">19:00</p>
+                    </div>
+                  </div> -->
+
+                  <p class="item__label">Вечер романтики</p>
+
+                  <div class="item-price-button">
+                    <p class="item__price font-semibold-20">от 500 ₽</p>
+                    <button type="button" class="btn btn-secondary font-semibold-14 btn-cancel-opacity">Купить билет</button>
+                  </div>
+
+                </div>
+                
+              </div>
+            
+            </div>
+
+            <div class="pagination-btns">
+              <button class="pag__btn pag__arrow" type="button"><img src="../src/arrow__left.svg" alt=""></button>
+              <div class="numbers__pages">
+                <button class="pag__btn btn" type="button">1</button>
+                <button class="pag__btn btn" type="button">2</button>
+                <button class="pag__btn btn" type="button">3</button>
+                <button class="pag__btn btn" type="button">...</button>
+                <button class="pag__btn btn" type="button">20</button>
+              </div>
+              <button class="pag__btn pag__arrow" type="button"><img src="../src/arrow__right.svg" alt=""></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>  
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer__up-content">
+
+      <div class="info__wrapper">
+        <a href="main.html" class="info__logo">
+          <img src="../src/footer-logo.svg" alt="На главную">
+        </a>
+        <p class="info__description">Новое пространство для событий,<br>коллективов и городских инициатив.</p>
+        <div class="info__social-network">
+          <a class="social-network" href="">
+            <img class="social-network-img" src="../src/icons/Vk.svg" alt="vk">
+          </a>
+          <a class="social-network" href="">
+            <img class="social-network-img" src="../src/icons/MAX.svg" alt="max">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__menu-wrapper">
+        <div class="footer__menu-column">
+          <a href="" class="footer__menu-label">Разделы</a>
+          <a href="" class="footer__menu-item">Афиша</a>
+          <a href="" class="footer__menu-item">О Центре</a>
+          <a href="" class="footer__menu-item">Творческие коллективый</a>
+        </div>
+        <div class="footer__menu-column second-column">
+          <a href="" class="footer__menu-label">Информация</a>
+          <a href="" class="footer__menu-item">Документы</a>
+          <a href="" class="footer__menu-item">Новости</a>
+        </div>
+        <div class="footer__menu-column third-column">
+          <a href="" class="footer__menu-label">Контакты</a>
+          <a href="" class="footer__menu-item">г. Кострома, ул. Победы, 1</a>
+          <a href="" class="footer__menu-item">8 (4942) 000-00-00</a>
+          <a href="" class="footer__menu-item">info@ck-maysky.ru</a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer__devider">
+
+    <div class="footer__bottom-content">
+      <p class="copyright">© 2026 Центр культуры «Майский». Все права защищены.</p>
+      <a href="" class="privacy__label">Политика конфиденциальности</a>
+    </div>
+
+  </footer>
+
+  <script src="../js/calendar.js"></script>
+  
+</body>
+</html>
