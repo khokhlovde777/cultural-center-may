@@ -1,34 +1,50 @@
 .head-section {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  height: 706px;
+  height: 676px;
   /* height: 100vh; */
   position: relative;
   overflow: hidden;
 }
 
+.content-head {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 70px;
+}
+
 .head-section__badge {
-  color: #FFEDE9;
+  color: #363636;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px 18px;
-  background-color: #FFEDE940;
+  background-color: #FFFFFF99;
   border-radius: 100px;
   border: 1px solid #FFEDE9;
 }
 
 .head-section__text {
-  color: var(--text-inverse);
-  opacity: .7;
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+  gap: 40px;
+}
+
+.head-date-item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
   gap: 16px;
 }
 
