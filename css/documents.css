@@ -1,0 +1,93 @@
+.docs-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.doc-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 8px;
+  border-radius: 32px;
+  background-color: #EAEAEA;
+}
+
+.doc-content-info {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.doc-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 0 80px 0;
+}
+
+.doc-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.doc-item__label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.doc-item__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.doc-item__icon {
+  width: 28px;
+}
+
+.doc-item__name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.doc-item__download {
+  color: #0347BD;
+}
+
+.doc__tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 32px;
+  background-color: #EAEAEA;
+}
+
+.doc__button {
+  padding: 8px 18px;
+  border-radius: 40px;
+  line-height: normal;
+  height: 35px;
+}
+
+.doc__button.active {
+  color: #FFFFFF;
+  background-color: var(--brand-primary);
+}
+
+.no-visible {
+  display: none;
+}
