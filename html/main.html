@@ -547,7 +547,86 @@
       </div>
     </section>
 
-    <section></section>
+    <section class="contacts-section">
+      <div class="contacts-section__bg-img">
+        <img class="cs-bg__img" src="../src/form-back-img.png" alt="">
+        <div class="cs-bg__blur"></div>
+      </div>
+      <div class="content-area contacts-content">
+        <div class="contacts-info">
+          <h2 class="ci__label font-semibold-40">Контакты</h2>
+          <div class="ci__content">
+            <div class="ci__item">
+              <img class="ci__icon" src="../src/icons/geo.svg" alt="">
+              <p class="ci__description font-semibold-16">г. Кострома, ул. Победы, 1</p>
+            </div>
+            <div class="ci__item">
+              <img class="ci__icon" src="../src/icons/tel.svg" alt="">
+              <p class="ci__description font-semibold-16">+7 (900) 000-00-00</p>
+            </div>
+            <div class="ci__item">
+              <img class="ci__icon" src="../src/icons/mail.svg" alt="">
+              <p class="ci__description font-semibold-16">info@ck-maysky.ru</p>
+            </div>
+          </div>
+          <div class="info__social-network ci__network">
+            <a class="social-network" href="">
+              <img class="social-network-img" src="../src/icons/Vk.svg" alt="vk">
+            </a>
+            <a class="social-network" href="">
+              <img class="social-network-img" src="../src/icons/MAX.svg" alt="max">
+            </a>
+          </div>
+          <div class="ci__map">
+            <img class="ci__map-img" src="../src/map.png" alt="">
+          </div>
+        </div>
+
+        <div class="contacts-form">
+          <p class="cf__label font-semibold-20">Если есть вопросы, напишите нам</p>
+
+          <form action="" method="get" autocomplete="off" class="cf__form-wrapper">
+            <div class="cf-form__item">
+              <p class="form__label">Имя Фамилия</p>
+              <div class="form-field-wrapper">
+                <input type="text" class="form__input" placeholder="Имя Фамилия" autocomplete="off">
+              </div>
+            </div>
+            <div class="cf-form__item">
+              <p class="form__label">Телефон</p>
+              <div class="form-field-wrapper">
+                <input type="tel" class="form__input form__tel" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _" autocomplete="tel">
+              </div>
+            </div>
+            <div class="cf-form__item">
+              <p class="form__label">Почта</p>
+              <div class="form-field-wrapper">
+                <input type="text" class="form__input" placeholder="name@mail.ru" autocomplete="off">
+              </div>
+            </div>
+            <div class="cf-form__item">
+              <p class="form__label">Сообщение</p>
+              <div class="form-field-wrapper form__input-message">
+                <input type="text" class="form__input" placeholder="Введите текст" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="form__checkbox">
+              <input type="checkbox" id="privacy" class="request-form__checkbox">
+              <label for="privacy" class="request-form__checkbox-label">
+                <span class="request-form__checkbox-text font-regular-14">
+                  Согласен(на) на обработку персональных данных
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-form font-semibold-16">Отправить</button>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 
