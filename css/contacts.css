@@ -1,0 +1,237 @@
+.head-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 193px 0 112px 0;
+}
+
+.contacts-head-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  gap: 40px;
+}
+
+.contacts-info-wrapper {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 28px;
+}
+
+.ci__label {
+  width: 100%;
+  color: var(--text-primary);
+}
+
+.ci__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+}
+
+.ci__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.ci__icon {
+  width: 24px;
+}
+
+.ci__description {
+  color: var(--text-primary);
+}
+
+.ci__map {
+  width: 573px;
+  height: 293px;
+  border-radius: 20px;
+}
+
+.form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 0;
+}
+
+.form-section {
+  padding: 100px 0 80px 0;
+  position: relative;
+  width: 100%;
+}
+
+.contacts-form-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.contacts-section__bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+}
+
+.cs-bg__img {
+  width: 100%;
+}
+
+.cs-bg__blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #FBEEEB99;
+  backdrop-filter: blur(4px);
+}
+
+.contacts-form {
+  width: 100%;
+  width: 573px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+}
+
+.cf__label {
+  width: 100%;
+  color: var(--text-primary);
+}
+
+.cf__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.cf-form__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+.form__label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666666;
+  padding-left: 16px;
+}
+
+.form-field-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #F5F5F5;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 48px;
+}
+
+input.form__input {
+  background-color: inherit;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0px;
+  margin: 0;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 16px;
+  height: 100%;
+  box-sizing: border-box;
+  color: #B5B8BB;
+}
+
+input.form__input::placeholder {
+  color: #B5B8BB;
+}
+
+input.form__input.form__tel::placeholder {
+  color: #000000;
+}
+
+.form__input-message {
+  height: 68px;
+}
+
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.request-form__checkbox-text {
+  color: var(--text-secondary);
+}
+
+.request-form__checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.request-form__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 34px;
+}
+
+.request-form__checkbox-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000000;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.request-form__checkbox:checked + .request-form__checkbox-label::before {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btn-form {
+  width: 100%;
+}
