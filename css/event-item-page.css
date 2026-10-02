@@ -1,0 +1,167 @@
+.news-item-wrapper {
+  padding: 193px 0 81px 0;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-item-content {
+  width: 97vw;
+  max-width: 1410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.imgs-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.main-gallery {
+  width: 100%;
+  max-width: 693px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.gallery-slide {
+  width: 100%;
+  max-width: 693px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.thumbs-gallery {
+  width: 100%;
+  max-width: 700px;
+  padding: 4px 0;
+}
+
+.thumb-slide {
+  width: 215px;
+  max-width: 215px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.thumbs-gallery .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.ni-information {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 693px;
+}
+
+.ni-info__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 32px;
+}
+
+.ni__tags-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.ni__tag, .ni__description {
+  color: #6A7376;
+}
+
+.ni__circ {
+  width: 8px;
+  height: 8px;
+  background-color: #B5B8BB;
+  border-radius: 50%;
+}
+
+.ni__name {
+  color: var(--text-primary);
+}
+
+.ni-dates-price {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ni__dates-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.ni__date-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.ni__date {
+  width: 31px;
+}
+
+.ni__date-name {
+  color: #112B50;
+}
+
+.ni__price-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+}
+
+.ni__price-label {
+  color: #6A7376;
+}
+
+.ni__proce__sum {
+  font-size: 32px;
+  color: #1B2C48;
+}
