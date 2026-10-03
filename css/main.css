@@ -876,3 +876,8 @@ input.form__input.form__tel::placeholder {
     align-items: start;
   }
 }
+
+
+@media (max-width: 959px) {
+  
+}

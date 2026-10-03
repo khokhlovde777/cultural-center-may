@@ -26,10 +26,42 @@
         <a href="" class="menu__link font-semibold-16">Контакты</a>
       </div>
 
-      <button type="button" class="btn btn-primary">
+      <button type="button" class="btn btn-primary header-btn-desktop">
         <p class="font-semibold-16">Купить билет</p>
       </button>
 
+      <button id="header-btn-mob" type="button" class="btn header-btn-mob">
+        <svg class="menu-open" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="3.9" y1="5.6" x2="20.1" y2="5.6" stroke="black" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="3.9" y1="11.6" x2="20.1" y2="11.6" stroke="black" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="3.9" y1="17.6" x2="20.1" y2="17.6" stroke="black" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+
+        <svg class="menu-close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+      </button>
+
+    </div>
+    <div class="mob-menu-header">
+      <button type="button" class="btn mob-button-menu mob-menu__item font-semibold-16">Главная</button>
+      <hr class="mob-menu__devider">
+      <button type="button" class="btn mob-button-menu mob-menu__item font-semibold-16">Афиша</button>
+      <hr class="mob-menu__devider">
+      <button type="button" class="btn mob-button-menu mob-menu__item font-semibold-16">Новости</button>
+      <hr class="mob-menu__devider">
+      <button type="button" class="btn mob-button-menu mob-menu__item font-semibold-16">Творческие коллективы</button>
+      <hr class="mob-menu__devider">
+      <button type="button" class="btn mob-button-menu mob-menu__item font-semibold-16">О центре</button>
+      <hr class="mob-menu__devider">
+      <button type="button" class="btn mob-button-menu mob-menu__item font-semibold-16">Информация для посетителей</button>
+      <hr class="mob-menu__devider">
+      <button type="button" class="btn mob-button-menu mob-menu__item font-semibold-16">Документы</button>
+      <hr class="mob-menu__devider">
+      <button type="button" class="btn mob-button-menu mob-menu__item font-semibold-16">Контакты</button>
+      <hr class="mob-menu__devider">
     </div>
   </header>
 
@@ -299,5 +331,6 @@
   </footer>
 
   <script src="../js/infoVisitors_chooseTypes.js"></script>
+  <script src="../js/openHeaderMenuMob.js"></script>
 </body>
 </html>
