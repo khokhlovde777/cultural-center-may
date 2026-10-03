@@ -123,3 +123,13 @@
     max-width: 375px;
   }
 }
+
+@media (max-width: 1024px) {
+  .event-item {
+    max-width: none;
+  }
+
+  .item__img {
+    height: 220px;
+  }
+}

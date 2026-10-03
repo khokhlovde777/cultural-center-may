@@ -113,3 +113,11 @@
     max-width: 1280px;
   }
 }
+
+@media (max-width: 1300px) {
+
+  .footer__up-content, .footer__devider, .footer__bottom-content {
+    width: 97vw;
+  }
+
+}

@@ -846,3 +846,33 @@ input.form__input.form__tel::placeholder {
     display: none;
   }
 }
+
+@media (max-width: 1056px) {
+  .ci__map {
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .third-item {
+    display: none;
+  }
+
+  .first-group {
+    margin-left: calc(3vw / 2);
+  }
+
+  .feedback__qr {
+    max-width: 382px;
+  }
+
+  .feedback__vars {
+    justify-content: start;
+  }
+
+  .feedback__var {
+    align-items: start;
+  }
+}
