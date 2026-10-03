@@ -150,7 +150,7 @@
 }
 
 .contacts-section {
-  padding: 80px;
+  padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,7 +242,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 71px;
+  padding: 71px 0;
 }
 
 .doc-background-img {
@@ -321,3 +321,14 @@
 }
 
 /* docs */
+
+
+@media (max-width: 1200px) {
+  .wrapper-info__description {
+    font-size: 16px;
+  }
+
+  .info__img {
+    width: 47.36vw;
+  }
+}
