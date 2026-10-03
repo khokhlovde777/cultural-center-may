@@ -86,6 +86,7 @@
   color: #9B1B1B;
 }
 
+
 .day-cell.past.weekend .weekday {
   color: #BEBEBE;
 }
@@ -276,4 +277,54 @@
 
 .choose-filter__label {
   color: var(--color-neutral-white);
+}
+
+/* === Режим по умолчанию (широкий экран) === */
+.calendar-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.calendar-weekdays {
+    display: none; /* скрыт на широком экране */
+}
+
+/* === Узкий экран (≤966px) === */
+@media (max-width: 966px) {
+  .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    text-align: center;
+    margin-bottom: -12px;
+    width: 100%;
+  }
+
+  .calendar-weekdays .weekday-header {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #BEBEBE;
+    text-transform: uppercase;
+  }
+
+  .weekend {
+    color: #9B1B1B !important;
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* В узком режиме ячейки центрируются, а не растягиваются */
+  .calendar-grid .day-cell {
+    width: 100%;
+    justify-content: center;
+  }
 }

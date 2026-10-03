@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const currentMonth = today.getMonth();
   const currentDay = today.getDate();
 
+  const NARROW_BREAKPOINT = 966;
+  const narrowMedia = window.matchMedia(`(max-width: ${NARROW_BREAKPOINT}px)`);
+
   const grid = document.getElementById('calendarGrid');
+  const weekdaysContainer = document.getElementById('calendarWeekdays');
   const monthTitle = document.getElementById('monthTitle');
   const calendarBtn = document.getElementById('buttonCalendar');
   const modal = document.getElementById('modalChooseMonth');
@@ -31,8 +35,85 @@ document.addEventListener('DOMContentLoaded', function() {
     return year < currentYear || (year === currentYear && month < currentMonth);
   }
 
+  function createDayCell(dayName, dayNumber, dayOfWeekIndex, isCurrentMonth, isPast, month, year) {
+    const cell = document.createElement('button');
+    cell.type = 'button';
+    cell.className = 'day-cell btn modal__btn';
+
+    if (dayOfWeekIndex === 5 || dayOfWeekIndex === 6) {
+      cell.classList.add('weekend');
+    }
+
+    if (isPast || (isCurrentMonth && dayNumber < currentDay)) {
+      cell.classList.add('past');
+    }
+
+    if (isCurrentMonth && dayNumber === currentDay) {
+      cell.classList.add('today');
+    }
+
+    cell.innerHTML = dayName
+      ? `<span class="weekday">${dayName}</span><span class="day-number">${dayNumber}</span>`
+      : `<span class="day-number">${dayNumber}</span>`;
+
+    cell.addEventListener('click', () => {
+      if (cell.classList.contains('past')) return;
+
+      document.querySelectorAll('.day-cell.active').forEach(el => {
+        el.classList.remove('active');
+      });
+      cell.classList.add('active');
+    });
+
+    return cell;
+  }
+
+  function renderWeekdaysHeader() {
+    weekdaysContainer.innerHTML = '';
+    weekDays.forEach((day, index) => {
+      const el = document.createElement('span');
+      el.className = 'weekday-header';
+      if (index === 5 || index === 6) {
+        el.classList.add('weekend');
+      }
+      el.textContent = day.toLowerCase();
+      weekdaysContainer.appendChild(el);
+    });
+  }
+
+  function renderCalendarWide(year, month, daysInMonth, startDayIndex, isCurrentMonth, isPast) {
+    weekdaysContainer.innerHTML = '';
+
+    for (let i = 0; i < daysInMonth; i++) {
+      const dayOfWeekIndex = (startDayIndex + i) % 7;
+      const dayName = weekDays[dayOfWeekIndex];
+      const dayNumber = i + 1;
+
+      const cell = createDayCell(dayName, dayNumber, dayOfWeekIndex, isCurrentMonth, isPast, month, year);
+      grid.appendChild(cell);
+    }
+  }
+
+  function renderCalendarNarrow(year, month, daysInMonth, startDayIndex, isCurrentMonth, isPast) {
+    renderWeekdaysHeader();
+
+    for (let i = 0; i < startDayIndex; i++) {
+      const emptyCell = document.createElement('div');
+      emptyCell.className = 'day-cell day-cell--empty';
+      grid.appendChild(emptyCell);
+    }
+
+    for (let i = 0; i < daysInMonth; i++) {
+      const dayOfWeekIndex = (startDayIndex + i) % 7;
+      const dayNumber = i + 1;
+
+      const cell = createDayCell(null, dayNumber, dayOfWeekIndex, isCurrentMonth, isPast, month, year);
+      grid.appendChild(cell);
+    }
+  }
+
   function renderCalendar(year, month) {
-    grid.innerHTML = ''; 
+    grid.innerHTML = '';
     monthTitle.textContent = monthNames[month];
 
     const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -42,46 +123,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const isCurrentMonth = (year === currentYear && month === currentMonth);
     const isPast = isPastMonth(year, month);
 
-    for (let i = 0; i < daysInMonth; i++) {
-      const dayOfWeekIndex = (startDayIndex + i) % 7;
-      const dayName = weekDays[dayOfWeekIndex];
-      const dayNumber = i + 1;
-
-      const cell = document.createElement('button');
-      cell.type = 'button';
-      cell.className = 'day-cell btn modal__btn';
-
-      if (dayOfWeekIndex === 5 || dayOfWeekIndex === 6) {
-        cell.classList.add('weekend');
-      }
-
-      if (isPast || (isCurrentMonth && dayNumber < currentDay)) {
-        cell.classList.add('past');
-      }
-
-      if (isCurrentMonth && dayNumber === currentDay) {
-        cell.classList.add('today');
-      }
-
-      cell.innerHTML = `
-        <span class="weekday">${dayName}</span>
-        <span class="day-number">${dayNumber}</span>
-      `;
-
-      cell.addEventListener('click', () => {
-
-        if (cell.classList.contains('past')) {
-            return;
-        }
-
-        document.querySelectorAll('.day-cell.active').forEach(el => {
-            el.classList.remove('active');
-        });
-
-        cell.classList.add('active');
-      });
-
-      grid.appendChild(cell);
+    if (narrowMedia.matches) {
+      renderCalendarNarrow(year, month, daysInMonth, startDayIndex, isCurrentMonth, isPast);
+    } else {
+      renderCalendarWide(year, month, daysInMonth, startDayIndex, isCurrentMonth, isPast);
     }
   }
 
@@ -132,6 +177,10 @@ document.addEventListener('DOMContentLoaded', function() {
   renderCalendar(selectedYear, selectedMonth);
   renderMonths(selectedYear, selectedMonth);
   modalYear.textContent = selectedYear;
+
+  narrowMedia.addEventListener('change', () => {
+    renderCalendar(selectedYear, selectedMonth);
+  });
 
   monthTitle.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -194,7 +243,6 @@ document.addEventListener('DOMContentLoaded', function() {
       item.textContent = option;
       item.addEventListener('click', (e) => {
         e.stopPropagation();
-        console.log(`Выбрано: ${option}`);
         addItemInMenu(wrapper, option);
         menu.remove();
         wrapper.classList.remove('open');
@@ -214,19 +262,18 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function addItemInMenu(wrapper, option) {
-
     let container = wrapper.querySelector('.choose-filters');
     if (!container) {
-        container = document.createElement('div');
-        container.className = 'choose-filters';
-        wrapper.appendChild(container);
+      container = document.createElement('div');
+      container.className = 'choose-filters';
+      wrapper.appendChild(container);
     }
 
     const existingItems = container.querySelectorAll('.choose-filter__label');
     for (const el of existingItems) {
-        if (el.textContent === option) {
-            return;
-        }
+      if (el.textContent === option) {
+        return;
+      }
     }
 
     const chip = document.createElement('div');
@@ -240,20 +287,20 @@ document.addEventListener('DOMContentLoaded', function() {
     removeBtn.type = 'button';
     removeBtn.className = 'btn modal__btn';
     removeBtn.innerHTML = `
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="12" fill="white"/>
-            <path d="M18 6L6 18" stroke="#5B0609" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M6 6L18 18" stroke="#5B0609" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="12" fill="white"/>
+        <path d="M18 6L6 18" stroke="#5B0609" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 6L18 18" stroke="#5B0609" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     `;
 
     removeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        chip.remove();
+      e.stopPropagation();
+      chip.remove();
 
-        if (container.children.length === 0) {
-            container.remove();
-        }
+      if (container.children.length === 0) {
+        container.remove();
+      }
     });
 
     chip.appendChild(label);
