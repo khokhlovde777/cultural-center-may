@@ -165,3 +165,20 @@
   font-size: 32px;
   color: #1B2C48;
 }
+
+@media (max-width: 1300px) {
+  .news-item-content {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .main-gallery, .gallery-slide, .thumbs-gallery, .ni-information {
+    max-width: none;
+  }
+
+  .ni-dates-price {
+    justify-content: start;
+    gap: 9%;
+  }
+
+}
