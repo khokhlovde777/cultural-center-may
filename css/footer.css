@@ -121,3 +121,24 @@
   }
 
 }
+
+@media (max-width: 1300px) {
+  .footer__up-content {
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+  }
+
+  .info__wrapper {
+    flex-direction: row;
+  }
+
+  .info__logo {
+    width: 130px;
+  }
+
+  .footer {
+    padding: 32px 0;
+  }
+}
+
