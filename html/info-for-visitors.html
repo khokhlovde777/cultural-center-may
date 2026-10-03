@@ -50,11 +50,20 @@
 
         <div class="info-visitors-wrapper">
 
-          <div class="iv__tabs">
-            <button id="iv-button-1" type="button" class="btn font-regular-16 iv__button">Изменения в расписании</button>
-            <button id="iv-button-2" type="button" class="btn font-regular-16 iv__button">Правило покупки и возврата билетов </button>
-            <button id="iv-button-3" type="button" class="btn font-regular-16 iv__button">Льготы для посетителей</button>
-            <button id="iv-button-4" type="button" class="btn font-regular-16 iv__button">Доступная среда</button>
+          <div class="iv__tabs iv-tabs-container">
+            <button id="iv-button-1" type="button" class="btn iv-btn font-regular-16 iv__button">Изменения в расписании</button>
+            <button id="iv-button-2" type="button" class="btn iv-btn font-regular-16 iv__button">Правило покупки и возврата билетов </button>
+            <button id="iv-button-3" type="button" class="btn iv-btn font-regular-16 iv__button">Льготы для посетителей</button>
+            <button id="iv-button-4" type="button" class="btn iv-btn font-regular-16 iv__button">Доступная среда</button>
+          </div>
+
+          <div class="iv__tabs--mob iv-tabs-container" id="filterTypeWrapper">
+            <button id="filterType" type="button" class="btn filter-btn">
+              <p class="filter-button__name font-semibold-16">Изменения в расписании</p>
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.900391 0.900002L6.90039 6.9L12.9004 0.900002" stroke="#5B0609" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
 
           <div class="iv__content">
@@ -289,6 +298,6 @@
 
   </footer>
 
-  <script src="../js/tabsInfoVisitors.js"></script>
+  <script src="../js/infoVisitors_chooseTypes.js"></script>
 </body>
 </html>
