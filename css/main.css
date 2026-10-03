@@ -638,7 +638,11 @@
 }
 
 .cs-bg__img {
+  inset: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .cs-bg__blur {
@@ -883,6 +887,13 @@ input.form__input.form__tel::placeholder {
   }
 
   .feedback__var {
+    align-items: start;
+  }
+}
+
+@media (max-width: 964px) {
+  .group-item{
+    max-width: 95vw;
     align-items: start;
   }
 }

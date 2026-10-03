@@ -332,3 +332,31 @@
     width: 47.36vw;
   }
 }
+
+@media (max-width: 960px) {
+  .info-content {
+    flex-direction: column;
+  }
+
+  .info__img {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .contacts__label {
+    font-size: 40px;
+  }
+
+  .ci__label {
+    font-size: 24px;
+  }
+
+  .ci-card__badge {
+    font-size: 12px;
+  }
+
+  .ci-card__name {
+    font-size: 16px;
+  }
+  
+}
