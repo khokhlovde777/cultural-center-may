@@ -1,0 +1,120 @@
+.error-page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ep-text-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.props-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.numeral-col {
+  position: relative;
+  width: 692px;
+  height: 179px;
+  flex: none;
+}
+
+.numeral-col svg {
+  position: absolute;
+  left: 87px;
+  top: 0;
+  width: 518px;
+  height: 179px;
+}
+
+.prop-item {
+  position: absolute;
+  filter: drop-shadow(0 6px 10px rgba(91, 6, 9, 0.16));
+  animation: propFloat 5.2s ease-in-out infinite;
+}
+
+.prop-item.d1 { animation-delay: 0s; }
+.prop-item.d2 { animation-delay: .6s; }
+.prop-item.d3 { animation-delay: 1.2s; }
+.prop-item.d4 { animation-delay: 1.8s; }
+.prop-item.d5 { animation-delay: 2.4s; }
+.prop-item.d6 { animation-delay: 3s; }
+.prop-item.d7 { animation-delay: 3.6s; }
+
+@keyframes propFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+.lamp-rig {
+  position: absolute;
+  top: -349px;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  transform-origin: 0 121px;
+  animation: lampSwing 4.4s cubic-bezier(.45,.05,.55,.95) infinite;
+}
+
+@keyframes lampSwing {
+  0%   { transform: rotate(calc(12deg * -1)); }
+  50%  { transform: rotate(12deg); }
+  100% { transform: rotate(calc(12deg * -1)); }
+}
+
+.lamp-cord {
+  position: absolute;
+  left: 0;
+  top: 137px;
+  width: 2px;
+  height: 91px;
+  background: linear-gradient(180deg, #e6e6e6 8%, #b7b8b8 70%);
+}
+
+.lamp-ball {
+  position: absolute;
+  left: -7px;
+  top: 121px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fdee46, #ff8c00 100%);
+  box-shadow: 0 4px 12px rgba(255, 150, 8, 0.85);
+}
+
+.lamp-holder,
+.lamp-holder-shine {
+  position: absolute;
+  left: -6px;
+  top: 228px;
+  width: 14px;
+  height: 12px;
+  clip-path: polygon(42.86% 0%, 57.14% 0%, 100% 100%, 0% 100%);
+}
+.lamp-holder       { background: #b7b8b8; }
+.lamp-holder-shine { background: linear-gradient(180deg, #b7b8b8 0%, rgba(255, 204, 132, 0.5) 100%); }
+
+.lamp-cone {
+  position: absolute;
+  left: -80px;
+  top: 240px;
+  width: 157px;
+  height: 136px;
+  clip-path: polygon(47.13% 0%, 56.05% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 151, 8, 0.6) 0%,
+    rgba(254, 231, 65, 0.45) 51.44%,
+    rgba(254, 231, 65, 0) 100%
+  );
+}
