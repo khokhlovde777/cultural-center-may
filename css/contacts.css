@@ -86,7 +86,12 @@
 }
 
 .cs-bg__img {
+  position: absolute;
+  inset: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .cs-bg__blur {
@@ -234,4 +239,10 @@ input.form__input.form__tel::placeholder {
 
 .btn-form {
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .contacts-form-wrapper {
+    justify-content: center;
+  }
 }
