@@ -144,4 +144,51 @@
   .numeral-col svg {
     left: 0;
   }
+
+  .ep__description {
+    text-align: center;
+  }
+}
+
+@media (max-width: 740px) {
+  .prop-item.d1 {
+    left: -26% !important;
+    top: -18% !important;
+  }
+
+  .prop-item.d2 { 
+    left: 83% !important;
+    top: -30% !important;
+  }
+
+  .prop-item.d3 {
+    left: 13% !important;
+    top: -31% !important;
+   }
+
+  .prop-item.d4 { 
+    right: -19% !important;
+    bottom: -51px !important;
+  }
+
+  .prop-item.d5 { 
+    left: -70px !important;
+    bottom: -22% !important;
+  }
+
+  .prop-item.d6 {
+    left: 9% !important;
+    bottom: -53% !important;
+  }
+
+  .prop-item.d7 { 
+    right: -22% !important;
+    top: 16% !important;
+  }
+
+  .prop-item.d8 { 
+    left: 58% !important;
+    bottom: -43% !important;
+  }
+
 }
