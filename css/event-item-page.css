@@ -182,3 +182,23 @@
   }
 
 }
+
+@media (max-width: 768px) {
+  .thumb-slide {
+    max-width: 90px;
+  }
+
+  .ni__tag {
+    font-size: 14px;
+  }
+
+  .ni__name, .ni__proce__sum {
+    font-size: 24px;
+  }
+
+  .ni__description, .ni__date-name {
+    font-size: 16px;
+  }
+
+
+}
