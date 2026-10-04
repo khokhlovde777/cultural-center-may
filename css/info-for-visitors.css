@@ -397,4 +397,20 @@
   .iv-card__change {
     padding: 12px;
   }
+
+  .rules__back-tickets-title {
+    font-size: 16px;
+  }
+
+  .rules__back-tickets {
+    font-size: 14px;
+  }
+
+  .rules__benefits {
+    font-size: 14px
+  }
+
+  .accessible__environment {
+    font-size: 14px;
+  }
 }
