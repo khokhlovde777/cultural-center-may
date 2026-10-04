@@ -275,3 +275,26 @@ input.form__input.form__tel::placeholder {
   }
 
 }
+
+@media (max-width: 592px) {
+
+  .head-wrapper {
+    padding: 130px 0 100px 0;
+  }
+
+  .ci__map {
+    height: 293px;
+  }
+
+  .ci__map-img {
+    height: 100%;
+  }
+
+  .contacts-form {
+    padding: 40px 24px;
+  }
+
+  .cf__label {
+    font-size: 24px;
+  }
+}
