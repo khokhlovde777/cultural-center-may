@@ -289,6 +289,7 @@
 
 .filter-button__name {
   color: #5B0609;
+  text-align: start;
 }
 
 .filter-wrapper.open {
@@ -363,5 +364,37 @@
 
   .iv__tabs--mob {
     display: block;
+  }
+}
+
+@media (max-width: 592px) {
+  .head-section {
+    height: 680px;
+    padding-bottom: 48px;
+  } 
+
+  .visitors-label {
+    font-size: 40px;
+  }
+
+  .about-info-section {
+    padding: 48px 0;
+  }
+
+  .info-visitors-wrapper {
+    gap: 40px;
+  }
+
+  .iv-card {
+    gap: 10px;
+  }
+
+  .iv-card__dates-wrapper {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .iv-card__change {
+    padding: 12px;
   }
 }
