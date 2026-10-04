@@ -211,3 +211,37 @@ input.search-input__text::placeholder {
     font-size: 40px;
   }
 }
+
+@media (max-width: 592px) {
+
+  .first-news {
+    padding: 12px 0 42px 16px;
+    gap: 8px;
+  }
+
+  .first-news__description {
+    display: none;
+  }
+
+  .first-news__texts {
+    width: 60%;
+  }
+
+  .first-news__date {
+    font-size: 10px;
+  }
+
+  .first-news__label {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .news-items-section {
+    padding: 32px 0;
+  }
+
+  .news-items {
+    display: flex;
+    flex-direction: column;
+  }
+}
