@@ -199,3 +199,57 @@
 }
 
 
+@media (max-width: 592px) {
+
+  .head-section {
+    height: 646px;
+    justify-content: end;
+    padding-bottom: 48px;
+  }
+
+  .head-section__label {
+    font-size: 40px;
+  }
+
+  .head-section__text {
+    gap: 32px;
+  }
+
+  .events-wrapper {
+    display: flex;
+    flex-direction: column;
+  } 
+
+  .poster-content {
+    gap: 24px;
+  }
+
+  .head-section__badge {
+    font-size: 12px;
+  }
+
+  .head-section__text__label {
+    font-size: 40px;
+  }
+
+  .head__par {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .calendar-label {
+    font-size: 24px;
+  }
+
+  .calendar-info, .calendar-info--number {
+    font-size: 14px;
+  }
+
+  .calendar-content {
+    align-items: start;
+  }
+
+  .btn-secondary {
+    font-size: 14px;
+  }
+}
