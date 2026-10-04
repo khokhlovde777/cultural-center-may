@@ -92,3 +92,23 @@
     max-width: 55%;
   }
 }
+
+@media (max-width: 592px) {
+  .head-section {
+    height: 646px;
+    width: 100%;
+  }
+
+  .head-content__left {
+    gap: 24px;
+  }
+
+  .visitors-label {
+    font-size: 40px;
+    max-width: none;
+  }
+
+  .news-wrapper {
+    padding: 64px 0 48px 0;
+  }
+}
