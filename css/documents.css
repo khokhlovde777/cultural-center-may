@@ -91,3 +91,136 @@
 .no-visible {
   display: none;
 }
+
+.doc__tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 32px;
+  background-color: #EAEAEA;
+}
+
+.doc__button {
+  padding: 8px 18px;
+  border-radius: 40px;
+  line-height: normal;
+  height: 35px;
+}
+
+.doc__button.active {
+  color: #FFFFFF;
+  background-color: var(--brand-primary);
+}
+
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: auto;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.filter-btn:active {
+  transform: none !important;
+}
+
+.filter-button__name {
+  color: #5B0609;
+}
+
+.filter-wrapper.open {
+  border: 2px solid #5B0609;
+}
+
+.filter-wrapper .filter-btn svg {
+  transition: all .2s ease;
+}
+
+.filter-wrapper.open .filter-btn svg {
+  transition: all .2s ease;
+  transform: rotate(180deg);
+}
+
+.filter-absolute-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  display: flex;
+  border: 2px solid #5B0609;
+  border-radius: 20px;
+  padding: 6px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 6px;
+  z-index: 2;
+  background-color: var(--color-neutral-50);
+}
+
+.filter-menu__devider {
+  width: 100%;
+  height: 1px;
+  color: #BABABA;
+}
+
+.choose-filters {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #5B0609;
+  border-radius: 20px;
+  padding: 2px 2px 2px 12px;
+}
+
+.choose-filter__label {
+  color: var(--color-neutral-white);
+}
+
+.doc__tabs--mob {
+  position: relative;
+  border-radius: 32px;
+  border: 2px solid #BABABA;
+  padding: 4px;
+  height: 36px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.doc__tabs--mob {
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 1051px) {
+  .doc-tabs {
+    display: none;
+  }
+
+  .doc__tabs--mob {
+    display: block;
+  }
+
+  .doc-content-info {
+    margin-top: 0;
+  }
+
+  
+}
