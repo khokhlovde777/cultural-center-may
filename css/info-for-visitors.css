@@ -392,6 +392,7 @@
   .iv-card__dates-wrapper {
     flex-direction: column;
     align-items: start;
+    gap: 16px;
   }
 
   .iv-card__change {
