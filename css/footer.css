@@ -163,4 +163,8 @@
     align-items: start;
     gap: 15px;
   }
+
+  .footer__menu-wrapper {
+    row-gap: 40px;
+  }
 }

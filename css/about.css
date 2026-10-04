@@ -39,6 +39,10 @@
   gap: 24px;
 }
 
+.head-section__text__label {
+  text-transform: uppercase;
+}
+
 .head__location {
   display: flex;
   align-items: center;
@@ -78,12 +82,12 @@
 }
 
 .back-img {
-  width: 102vw;
-  max-width: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   z-index: -1;
 }
 
@@ -359,4 +363,72 @@
     font-size: 16px;
   }
   
+}
+
+@media (max-width: 592px) {
+  .head-section {
+    height: 680px;
+    align-items: end;
+    padding-bottom: 48px;
+  }
+
+  .head-content__left {
+    gap: 16px;
+  }
+
+  .head-section__text__label {
+    text-transform: none;
+  }
+
+  .location__name {
+    font-size: 14px;
+  }
+
+  .value-item__number {
+    font-size: 48px;
+  }
+
+  .value-item__description {
+    font-size: 14px;
+  }
+
+  .contacts-section {
+    padding: 40px 0;
+  }
+
+  .contacts-content {
+    gap: 32px;
+  }
+
+  .cont-item {
+    gap: 16px;
+  }
+
+  .ci-cards-wrapper {
+    flex-direction: column;
+  }
+
+  .documents-section {
+    padding: 40px 0 64px 0;
+  }
+
+  .documents-content {
+    gap: 24px;
+  }
+
+  .documents__label {
+    font-size: 24px;
+  }
+
+  .documents__items {
+    gap: 24px;
+  }
+
+  .doc-item__label {
+    font-size: 16px;
+  }
+
+  .doc-item__name {
+    font-size: 14px;
+  }
 }
