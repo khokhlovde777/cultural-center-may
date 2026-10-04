@@ -86,7 +86,7 @@
   position: absolute;
   bottom: 24px;
   left: 50%;
-  transform: translate(0, 0);
+  transform: translate(-50%, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,7 +285,34 @@
   .group__description {
     font-size: 14px;
   }
+}
 
+@media (max-width: 592px) {
+  .head-section {
+    height: 681px;
+    justify-content: end;
+    padding-bottom: 91px;
+  }
+
+  .head-section__badge {
+    padding: 4px 12px;
+  }
+
+  .head-section__text__label {
+    font-size: 40px;
+  }
+
+  .head__par {
+    font-size: 14px;
+    max-width: 50%;
+  }
+
+  .group-item {
+    flex-direction: column;
+    padding: 16px 12px 32px 12px;
+  }
   
-
+  .group__img-wrapper {
+    width: 100%;
+  }
 }

@@ -1033,6 +1033,7 @@ input.form__input.form__tel::placeholder {
     flex-direction: column;
     max-width: 86vw;
     align-items: start;
+    padding: 16px 12px 32px 12px;
   }
 
   .group__img-wrapper {
