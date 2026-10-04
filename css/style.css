@@ -383,3 +383,9 @@ h1, h2, h3, h4, h5, h6, p, li, figcaption {
     max-width: 95vw;
   }
 }
+
+@media (max-width: 425px) {
+  .content-area {
+    max-width: 92.9vw;
+  }
+}

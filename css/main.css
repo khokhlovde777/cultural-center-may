@@ -58,12 +58,12 @@
 }
 
 .back-img {
-  width: 102vw;
-  max-width: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   z-index: -1;
 }
 
@@ -939,7 +939,40 @@ input.form__input.form__tel::placeholder {
   .group__description{
     font-size: 14px;
   }
+}
 
-  
+@media (max-width: 592px) {
 
+  .poster-section {
+    padding: 64px 0;
+  }
+
+  .poster-content {
+    gap: 24px;
+  }
+
+  .head-section__badge {
+    font-size: 12px;
+  }
+
+  .head-section__text__label {
+    font-size: 40px;
+  }
+
+  .head__par {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .calendar-label {
+    font-size: 24px;
+  }
+
+  .calendar-info, .calendar-info--number {
+    font-size: 14px;
+  }
+
+  .calendar-content {
+    align-items: start;
+  }
 }
