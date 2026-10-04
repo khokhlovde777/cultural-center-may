@@ -931,3 +931,15 @@ input.form__input.form__tel::placeholder {
 
 }
 
+@media (max-width: 768px) {
+  .group__label {
+    font-size: 16px;
+  }
+
+  .group__description{
+    font-size: 14px;
+  }
+
+  
+
+}
