@@ -192,6 +192,10 @@
   .head-section__label {
     font-size: 24px;
   }
+
+  .head-section__badge {
+    padding: 4px 12px;
+  }
 }
 
 
