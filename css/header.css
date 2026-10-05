@@ -17,6 +17,10 @@
   gap: 40px;
 }
 
+.menu-button:hover {
+  color: #5B0609;
+}
+
 .mob-menu-header {
   display: none;
 }

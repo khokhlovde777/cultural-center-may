@@ -83,6 +83,10 @@
   height: 17px;
 }
 
+.footer__menu-item:hover {
+  color: #FFFFFF;
+}
+
 .footer__devider {
   height: 1px;
   color: var(--color-neutral-white);
